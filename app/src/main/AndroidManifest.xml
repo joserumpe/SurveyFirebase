@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jrumpe.surveyfirebase">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- <activity android:name=".MainActivity"/> -->
+
+
+        <!-- <activity android:name=".LoginActivity" /> -->
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SurveysHome" />
+        <activity android:name=".ExperienceActivity" />
+        <activity android:name=".RetailStore" />
+        <activity
+            android:name=".HomeView"
+            android:label="@string/title_activity_home_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SurveyQuestion"
+            android:label="@string/title_activity_survey_question"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

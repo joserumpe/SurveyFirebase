@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="14dp"
+    android:id="@+id/rootLayout"
+    android:layout_margin="8dp"
+    android:layout_marginTop="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExperienceActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            tools:context="app.android.ExperienceActivity">
+
+           <android.support.v7.widget.CardView
+            android:id="@+id/cardvw_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:padding="4dp"
+            app:cardCornerRadius="8dp" >
+
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvDearCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Dear Customer:"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+            <View
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="8dp"
+            android:background="#000000"
+            android:foreground="#000000"
+            android:alpha="0.6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+            <TextView
+            android:id="@+id/tvIntroduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="As the manager of [COMPANY], I want to thank you for giving us the opportunity to serve you. Please help us by taking a couple of minutes to tell us about your experience. We appreciate your business and want to make sure we meet your expectations. Attached, you will find a coupon good for ...... We hope that you will accept this as a token of our good will."
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+            <TextView
+            android:id="@+id/tvsincerely"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Sincerely,"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+            <TextView
+            android:id="@+id/tvGeneralManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="10dp"
+            android:text="GENERAL MANAGER."
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+            </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardQuestionOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardvw_introduction">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/tvCommon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvQuizOne"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Question one:"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#000000"
+                        android:foreground="#000000"
+                        android:alpha="0.6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <TextView
+                        android:id="@+id/tv_one_often"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="How often do you use [PRODUCT]?"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_one_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:id="@+id/rg_one_often"
+                        android:padding="6dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_one_often"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Daily" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_two_often"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Once a week or more" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_three_often"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="A couple of times a month" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_four_often"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Once a month" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_five_often"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Every 1-6 months" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_six_often"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Less than every 6 months" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/layout1"
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/tvQuizTwo"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Question two:"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#000000"
+                        android:foreground="#000000"
+                        android:alpha="0.6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp">
+                    </View>
+
+                    <TextView
+                        android:id="@+id/tv_two_satisfy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Overall, how satisfied are you with [PRODUCT]?"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_two_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:id="@+id/rg_two_satisfy"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_one_satisfy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Extremely Satisfied" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_two_satisfy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Somewhat Satisfied" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_three_satisfy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Neutral" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_four_satisfy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Somewhat Unsatisfied" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_five_satisfy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Extremely Unsatisfied" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/layout2"
+                    android:id="@+id/layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/tvQuizThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:text="Question three:"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#000000"
+                        android:foreground="#000000"
+                        android:alpha="0.6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <TextView
+                        android:id="@+id/tv_three_likely"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="How likely are you to use/purchase [PRODUCT] again?"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_three_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:id="@+id/rg_three_likely"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_one_likely"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Definitely" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_two_likely"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Probably" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_three_likely"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Might or might not" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_four_likely"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Probably not" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_five_likely"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Definitely not" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_six_likely"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Never used" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/layout3"
+                    android:id="@+id/layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/tvQuizFour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:text="Question Four:"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#000000"
+                        android:foreground="#000000"
+                        android:alpha="0.6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp">
+                    </View>
+
+                    <TextView
+                        android:id="@+id/tv_four_recommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Would you recommend [PRODUCT] to others?"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_four_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:id="@+id/rg_four_recommend"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_one_recommend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Definitely" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_two_recommend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Probably" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_three_recommend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Might or might not" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_four_recommend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Probably not" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_five_recommend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Definitely not" />
+
+                        <RadioButton
+                            android:layout_marginBottom="6dp"
+                            android:id="@+id/rb_six_recommend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="N/A" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout5"
+                    android:layout_below="@id/layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:textAlignment="center"
+                        android:text="Finish Survey"
+                        android:textSize="18sp"
+                        android:background="@android:color/holo_red_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.constraint.ConstraintLayout>
+
+       </ScrollView>
+</RelativeLayout>

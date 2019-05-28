@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimg"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginTop="0dp"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <!-- Toolbar -->
+    <!--<include layout="@layout/toolbar"/>-->
+
+    <!--<include-->
+        <!--layout="@layout/toolbar_action_bar_shadow"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/toolbar"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_menu_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:paddingTop="6dp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="1dp"
+            android:text="Main Menu Details"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+
+                <Button
+                    android:id="@+id/enter_data"
+                    android:text="Fill a Blank Survey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textAllCaps="false"
+                    android:textSize="21sp"
+                    android:textStyle="normal"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <Button
+                    android:id="@+id/review_data"
+                    android:text="Edit Saved Survey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textAllCaps="false"
+                    android:textSize="21sp"
+                    android:textStyle="normal"/>
+
+                <View
+                    android:id="@+id/review_spacer"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <Button
+                    android:id="@+id/send_data"
+                    android:text="Send a Finalised Survey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textAllCaps="false"
+                    android:textSize="21sp"
+                    android:textStyle="normal"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <Button
+                    android:id="@+id/view_sent_forms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="View all Sent Surveys"
+                    android:textAllCaps="false"
+                    android:textSize="21sp"
+                    android:textStyle="normal"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/get_forms"
+                    android:text="Get blank Forms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textAllCaps="false"
+                    android:textSize="21sp"
+                    android:textStyle="normal"/>
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/get_forms_spacer"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <Button
+                    android:id="@+id/manage_forms"
+                    android:text="Delete Saved Surveys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textAllCaps="false"
+                    android:textSize="21sp"
+                    android:textStyle="normal"/>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

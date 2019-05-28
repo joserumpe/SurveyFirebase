@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Survey Firebase</string>
+    <string name="title_activity_home_view">HomeView</string>
+    <string name="title_activity_survey_question">SurveyQuestion</string>
+</resources>

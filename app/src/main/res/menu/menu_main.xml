@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item
+    android:id="@+id/inputip"
+    android:title="settings">
+</item>
+<item
+    android:id="@+id/printpdf"
+    android:title="Print to pdf">
+</item>
+<item
+    android:id="@+id/exitapp"
+    android:title="exit">
+</item>
+</menu>
